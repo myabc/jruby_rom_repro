@@ -1,9 +1,16 @@
 require 'rom'
 
+require 'dry-types'
+require 'library_api_client/models'
+
 ##
 # Namespace used to hold utilities to access Library API
 #
 module LibraryApiClient
+  module Types
+    include Dry::Types.module
+  end
+
   ##
   # hold LibraryApiClient configuration options
   #
@@ -45,7 +52,7 @@ module LibraryApiClient
         }
       )
       configuration.auto_registration(File.join(__dir__, 'library_api_client'),
-                                      namespace: LibraryApiClient)
+                                      namespace: 'LibraryApiClient')
       LibraryApiClient::Config.rom_container = ROM.container(configuration)
 
       configured?

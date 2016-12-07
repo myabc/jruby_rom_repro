@@ -1,8 +1,9 @@
 require 'contracts'
+require 'dry-struct'
 
 module LibraryApiClient
   module Models
-    class Book < Dry::Types::Struct
+    class Book < Dry::Struct
       include Contracts::Core
 
       attribute :id, Types::Strict::Int

@@ -21,4 +21,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rubocop"
   spec.add_dependency "rom-http", "~> 0.5.0"
   spec.add_dependency "contracts", ">= 0.10.0"
+  spec.add_dependency 'dry-struct'
 end
