@@ -1,5 +1,5 @@
 module LibraryApiClient
-  #module Mappers
+  module Mappers
     class BookMapper < ROM::Mapper
       relation :books
       symbolize_keys true
@@ -10,5 +10,5 @@ module LibraryApiClient
       attribute :premium
       attribute :sm_classic_id
     end
-  #end
+  end
 end

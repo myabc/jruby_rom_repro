@@ -1,5 +1,5 @@
 module LibraryApiClient
-  #module Relations
+  module Relations
     ##
     # ROM::Relation to query books adapter
     #
@@ -14,5 +14,5 @@ module LibraryApiClient
         with_path('/find_by_classic_id').with_params(book_classic_id: id.to_s)
       end
     end
-  #end
+  end
 end

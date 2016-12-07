@@ -52,7 +52,7 @@ module LibraryApiClient
         }
       )
       configuration.auto_registration(File.join(__dir__, 'library_api_client'),
-                                      namespace: 'LibraryApiClient')
+                                      namespace: true)
       LibraryApiClient::Config.rom_container = ROM.container(configuration)
 
       configured?
